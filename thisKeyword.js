@@ -96,7 +96,7 @@ let sakib = {
     name:"salib",
     age:45
 }
-Func(); //undefined
+Func(); //undefined.
 
 
 
