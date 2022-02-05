@@ -97,7 +97,7 @@ let sakib = {
     age:45
 }
 Func(); //undefined.
-
+//call bind apply is only for normal function not for arro function
 
 
 
