@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="item-container">
+        <li class="item">Lorem, ipsum.</li>
+        <li class="item">Esse, culpa.</li>
+        <li class="item">Aspernatur, enim.</li>
+        <li class="item">Ad, ratione.</li>
+        <li class="item">Atque, quia?</li>
+        <li class="item">Alias, quia?</li>
+        <li class="item">Laborum, quidem!</li>
+    </ul>
+    <button id="add-btn">Add Item</button>
+    <script>
+        // const items = document.getElementsByClassName('item');
+        // for(const item of items)
+        // {
+        //     item.addEventListener('click',function(event){
+        //         // document.getElementById('item-container').removeChild(item);
+        //         console.log(event.target.parentNode);
+        //         event.target.parentNode.removeChild(event.target);
+        //         // event.target hoitase jai child ta click hoise
+        //     });// eita ar nicher comment out gula prothome korsilam.
+        // }
+        //Add children
+        document.getElementById('add-btn').addEventListener('click',() =>{
+            const li = document.createElement('li');
+            li.innerText="Brand New Item";
+            // li.setAttribute('class','item'); //eita dileo delete hoi na
+            li.classList.add('item');
+            const parent = document.getElementById('item-container');
+            parent.appendChild(li);
+            // const items = document.getElementsByClassName('item');
+            // for(const item of items)
+            // {
+            //     item.addEventListener('click',function(event){
+            //         // document.getElementById('item-container').removeChild(item);
+            //         console.log(event.target.parentNode);
+            //         event.target.parentNode.removeChild(event.target);
+            //         // event.target hoitase jai child ta click hoise
+            //     });
+            // } //// Eita ekta Joratali arki
+        });
+        document.getElementById('item-container').addEventListener('click',(event)=>{
+            event.target.parentNode.removeChild(event.target);
+        });
+        ///EI KHAN TAI BUJHAR BISOY EITA.E HOITASE EVENT DELEGATE
+        ///Ar somossata silo jokhon amra brand new item jog kortam tokhon item gula common techniques e remove kora jaito na.
+    </script>
+</body>
+</html>
